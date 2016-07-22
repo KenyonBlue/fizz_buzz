@@ -13,15 +13,21 @@
     <script src="jquery-3.0.0.js"></script>
     <script>
         $(document).ready(function () {
+
             for (var i = 1; i <= 100; i++) {
-                if (i % 15 == 0)
-                    window.document.writeln('fizzbuzz');
-                else if (i % 5 == 0)
-                    window.document.writeln('buzz');
-                else if (i % 3 == 0)
-                    window.document.writeln('fizz');
-                else
-                    window.document.writeln(i);
+                var msg = "";
+                if (i % 3 == 0) msg += "Fizz";
+                if (i % 5 == 0) msg += "Buzz";
+                console.log(msg || i);
+
+                //                if (i % 15 == 0)
+                //                    window.document.writeln('fizzbuzz');
+                //                else if (i % 5 == 0)
+                //                    window.document.writeln('buzz');
+                //                else if (i % 3 == 0)
+                //                    window.document.writeln('fizz');
+                //                else
+                //                    window.document.writeln(i);
             }
         })
     </script>
